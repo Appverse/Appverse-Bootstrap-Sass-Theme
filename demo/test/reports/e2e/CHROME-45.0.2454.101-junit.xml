@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="E2E: Testing accounts view" timestamp="2015-10-15T17:44:47" hostname="localhost" time="5.91" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="E2E: Testing accounts view" name="should display the accounts view" time="1.603" />
+  <testcase classname="E2E: Testing accounts view" name="should search and return a single account" time="0.327" />
+ </testsuite>
+ <testsuite name="E2E: Testing login view" timestamp="2015-10-15T17:44:53" hostname="localhost" time="0.932" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="E2E: Testing login view" name="should have a working /login route" time="0.841" />
+  <testcase classname="E2E: Testing login view" name="should have a greeting title" time="0.04" />
+ </testsuite>
+ <testsuite name="E2E: Testing translate" timestamp="2015-10-15T17:44:54" hostname="localhost" time="0.524" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="E2E: Testing translate" name="should set the language to Spanish" time="0.274" />
+  <testcase classname="E2E: Testing translate" name="should set the language to English" time="0.232" />
+ </testsuite>
+</testsuites>

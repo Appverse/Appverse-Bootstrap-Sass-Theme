@@ -1,0 +1,158 @@
+[{
+        "tns:response": {
+            "Accounts": [
+                {
+                    "tipoProducto": {
+                        "$": "DV"
+                    },
+                    "balance": {
+                        "$": "9283959.5500000007450580596923828125"
+                    },
+                    "numTitulares": {
+                        "$": "6"
+                    },
+                    "accountNumber": {
+                        "$": "ES5600810001180001000210"
+                    },
+                    "description": {
+                        "$": "Account 1"
+                    },
+                    "owner": {
+                        "$": "Name of person 1"
+                    },
+                    "checkDigit": {
+                        "$": "18"
+                    },
+                    "branch": {
+                        "$": "0001"
+                    },
+                    "bank": {
+                        "$": "0081"
+                    },
+                    "iban": {
+                        "accountNumber": {
+                            "$": "0001000210"
+                        },
+                        "checkDigit": {
+                            "$": "18"
+                        },
+                        "countryCode": {
+                            "$": "ES"
+                        }
+                    },
+                    "currency": {
+                        "$": "EUR"
+                    }
+                },
+                {
+                    "tipoProducto": {
+                        "$": "DV"
+                    },
+                    "balance": {
+                        "$": "9283959.5500000007450580596923828125"
+                    },
+                    "numTitulares": {
+                        "$": "3"
+                    },
+                    "accountNumber": {
+                        "$": "ES5600810001180001000520"
+                    },
+                    "description": {
+                        "$": "Account 2"
+                    },
+                    "owner": {
+                        "$": "Name of person 2"
+                    },
+                    "checkDigit": {
+                        "$": "18"
+                    },
+                    "branch": {
+                        "$": "0001"
+                    },
+                    "bank": {
+                        "$": "0081"
+                    },
+                    "iban": {
+                        "accountNumber": {
+                            "$": "0001000210"
+                        },
+                        "checkDigit": {
+                            "$": "18"
+                        },
+                        "countryCode": {
+                            "$": "ES"
+                        }
+                    },
+                    "currency": {
+                        "$": "EUR"
+                    }
+                },
+                {
+                    "tipoProducto": {
+                        "$": "DV"
+                    },
+                    "balance": {
+                        "$": "9283959.5500000007450580596923828125"
+                    },
+                    "numTitulares": {
+                        "$": "4"
+                    },
+                    "accountNumber": {
+                        "$": "ES5600810001180001000520"
+                    },
+                    "description": {
+                        "$": "Account 3"
+                    },
+                    "owner": {
+                        "$": "Name of person 3"
+                    },
+                    "checkDigit": {
+                        "$": "18"
+                    },
+                    "branch": {
+                        "$": "0001"
+                    },
+                    "bank": {
+                        "$": "0081"
+                    },
+                    "iban": {
+                        "accountNumber": {
+                            "$": "0001000210"
+                        },
+                        "checkDigit": {
+                            "$": "18"
+                        },
+                        "countryCode": {
+                            "$": "ES"
+                        }
+                    },
+                    "currency": {
+                        "$": "EUR"
+                    }
+                }
+            ]
+        },
+        "tns:headers": {
+            "HEADER.USER.NAME": {
+                "$": "User"
+            },
+            "HEADER.SERVICE_COUNTRY": {
+                "$": "ES"
+            },
+            "HEADER.TRACKING_ID": {
+                "$": "2a39790a-b448-4519-9303-26f73eea634f"
+            },
+            "HEADER.USER.EXTERNAL_ID": {
+                "$": "ex"
+            },
+            "HEADER.STATUS": {
+                "$": "0"
+            },
+            "HEADER.SERVICE_LANGUAGE": {
+                "$": "es"
+            },
+            "HEADER.USER.EXTERNAL_TYPE": {
+                "$": "et"
+            }
+        }
+    }]

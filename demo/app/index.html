@@ -1,0 +1,164 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" ng-app="App">
+<!--<![endif]-->
+
+<head>
+      <title>TSB Bootstrap SASS Theme</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+      <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png?v=pgg3aw6lE4">
+      <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png?v=pgg3aw6lE4">
+      <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png?v=pgg3aw6lE4">
+      <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png?v=pgg3aw6lE4">
+      <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png?v=pgg3aw6lE4">
+      <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png?v=pgg3aw6lE4">
+      <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png?v=pgg3aw6lE4">
+      <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png?v=pgg3aw6lE4">
+      <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png?v=pgg3aw6lE4">
+      <link rel="icon" type="image/png" href="favicons/favicon-16x16.png?v=pgg3aw6lE4" sizes="16x16">
+      <link rel="icon" type="image/png" href="favicons/favicon-32x32.png?v=pgg3aw6lE4" sizes="32x32">
+      <link rel="icon" type="image/png" href="favicons/favicon-96x96.png?v=pgg3aw6lE4" sizes="96x96">
+      <link rel="icon" type="image/png" href="favicons/favicon-194x194.png?v=pgg3aw6lE4" sizes="194x194">
+      <link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png?v=pgg3aw6lE4" sizes="192x192">
+      <link rel="manifest" href="favicons/manifest.json?v=pgg3aw6lE4">
+      <link rel="mask-icon" href="favicons/safari-pinned-tab.svg?v=pgg3aw6lE4" color="#5bbad5">
+      <link rel="shortcut icon" href="/favicon.ico?v=pgg3aw6lE4">
+      <meta name="apple-mobile-web-app-title" content="TSB">
+      <meta name="application-name" content="TSB">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png?v=pgg3aw6lE4">
+      <meta name="theme-color" content="#ffffff">
+
+      <!-- build:css styles/vendor.css -->
+      <link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.min.css">
+      <link rel="stylesheet" href="bower_components/selectize/dist/css/selectize.css">
+      <link rel="stylesheet" href="bower_components/ng-grid/ng-grid.min.css">
+      <link rel="stylesheet" type="text/css" href="bower_components/ng-grid/ng-grid.min.css">
+      <link rel="stylesheet" type="text/css" href="bower_components/angularjs-slider/dist/rzslider.min.css">
+      <link rel="stylesheet" type="text/css" href="bower_components/angular-chart.js/dist/angular-chart.css">
+      <!-- endbuild -->
+
+      <!-- build:css(.tmp) styles/styles.css -->
+      <link rel="stylesheet" href="styles/css/bootstrap-theme.css">
+      <!-- endbuild -->
+</head>
+
+<!--Include the module with the app scope-->
+
+<body class="fade-in">
+      <!--[if lt IE 7]>
+          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+      <!--[if lt IE 10]>
+         <script src="bower_components/es5-shim/es5-shim.js"></script>
+         <script src="bower_components/es5-shim/es5-sham.js"></script>
+         <script src="bower_components/json3/lib/json3.min.js"></script>
+         <script src="bower_components/placeholders/dist/placeholders.min.js"></script>
+       <![endif]-->
+
+      <!-- HEADER/NAVIGATION BAR -->
+      <div class="container">
+            <nav class="navbar navbar-default navbar-fixed-top main-toolbar">
+
+                  <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar-collapse">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                        </button>
+                        <!-- ui-sref is a directive from ui-router for linking a state location with an anchor link.
+                We should almost always use ui-sref instead of href on our links when we want then to navigate
+                to a state. When this link is clicked it will take the application to the corresponding
+                state. Behind the scenes the directive also adds the correct href attr and url. -->
+                        <a class="navbar-brand" ui-sref="login">
+                              <img src="styles/images/logo.png">
+                        </a>
+                  </div>
+
+                  <div class="collapse navbar-collapse" id="main-navbar-collapse">
+                        <ul class="nav navbar-nav">
+                              <!-- Here you can see ui-sref in action again. Also notice the use of $state.includes,
+                    which will add the class on 'active'. -->
+                              <li data-ng-class="{ active: $state.includes('theme')}">
+                                    <a angular-ripple ui-sref="theme"><i class="glyphicon glyphicon-pencil"></i> Theme </a>
+                              </li>
+                              <li data-ng-class="{ active: $state.includes('ui-bootstrap') }">
+                                    <a angular-ripple="" ui-sref="ui-bootstrap"><i class="glyphicon glyphicon-book"></i> UI-Bootstrap</a>
+                              </li>
+                              <li data-ng-class="{ active: $state.includes('ui-select') }">
+                                    <a angular-ripple="" ui-sref="ui-select"><i class="glyphicon glyphicon-triangle-bottom"></i> UI-Select</a>
+                              </li>
+                        </ul>
+                  </div>
+            </nav>
+
+      </div>
+
+      <div class="container mainview">
+            <div class="row">
+                  <div class="col-md-12">
+                        <!-- MAIN INSERTION POINT
+             Here is the main ui-view (it is unnamed) as the main content insertion point.
+             It replaces the default Angular's ng-view directive.
+             It will be populate by its immediate children's templates/views unless otherwise
+             explicitly named views are targeted.
+        -->
+                        <div ui-view autoscroll="false"></div>
+                  </div>
+            </div>
+      </div>
+
+      <footer class="sticky-footer">
+            <div class="container text-center">
+                  <ul class="links">
+                        <li><a>Appverse 2015</a></li>
+
+                  </ul>
+            </div>
+      </footer>
+
+      <!-- build:js scripts/scripts.js -->
+      <script src="bower_components/jquery/dist/jquery.min.js"></script>
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="bower_components/angular-touch/angular-touch.min.js"></script>
+      <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+      <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+      <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+      <script src="bower_components/appverse-web-html5-core/dist/appverse/appverse.min.js"></script>
+      <script src="bower_components/appverse-web-html5-core/dist/appverse-router/appverse-router.min.js"></script>
+      <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+      <script src="bower_components/appverse-web-html5-core/dist/appverse-utils/appverse-utils.min.js"></script>
+      <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+      <script src="bower_components/angular-ui-select/dist/select.min.js"></script>
+      <script src="bower_components/angular-filter/dist/angular-filter.min.js"></script>
+      <script src="bower_components/angular-ripple/angular-ripple.js"></script>
+      <script src="bower_components/ng-grid/build/ng-grid.min.js"></script>
+      <script src="bower_components/angularjs-slider/dist/rzslider.min.js"></script>
+      <script src="bower_components/ng-tags-input/ng-tags-input.js"></script>
+      <script src="bower_components/venturocket-angular-slider/build/angular-slider.min.js"></script>
+      <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+      <script src="bower_components/angular-resize/dist/angular-resize.min.js"></script>
+      <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+      <script src="bower_components/Chart.js/Chart.min.js"></script>
+      <script src="bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
+      <script src="app.js"></script>
+      <script src="states/app-states.js"></script>
+      <!-- endbuild -->
+
+      <!-- Controllers -->
+      <script src="components/ui-bootstrap/uibootstrap-controller.js"></script>
+      <script src="components/ui-select/uiselect-controller.js"></script>
+      <!-- EO Controllers -->
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+{ 
+    "timeout": 300000,
+    "registry": {
+        "register": "http://appverse-iac.gftlabs.com:5678/",
+        "search": [
+            "http://appverse-iac.gftlabs.com:5678/",
+            "http://bower.herokuapp.com"
+        ]
+    }
+}

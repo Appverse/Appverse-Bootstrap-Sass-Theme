@@ -1,0 +1,17 @@
+node_modules
+dist
+.tmp
+.sass-cache
+app/bower_components
+app/sourcemaps/
+/nbproject
+/.idea/
+.sonar/
+coverage/
+doc/
+test/unit/test-results.xml
+*.iml
+/app/styles/css/
+/app/styles/fonts/
+/app/resources/i18n/angular/
+/node_modules/

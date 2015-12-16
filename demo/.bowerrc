@@ -1,0 +1,12 @@
+{
+    "directory": "app/bower_components",
+    "timeout": 300000,
+    "registry": {
+        "register": "http://appverse-iac.gftlabs.com:5678/",
+        "search": [
+            "http://bower.herokuapp.com",
+            "http://appverse-iac.gftlabs.com:5678/"
+
+        ]
+    }
+}
