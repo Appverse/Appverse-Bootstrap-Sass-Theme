@@ -67,6 +67,12 @@ module.exports = {
         dest: '.tmp/styles/fonts',
         src: '**/*'
     },
+    fontstheme: {
+        expand: true,
+        cwd:'../bootstrap-theme/fonts',
+        dest: 'app/styles/css/fonts',
+        src: '**/*'
+    },
     theme: {
        expand: true,
        cwd: '<%=paths.app%>/styles/sass/bootstrap-theme',

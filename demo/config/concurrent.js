@@ -7,9 +7,10 @@ module.exports = {
     server: [
         'sass',
         'copy:fonts',
+        'copy:fontstheme',
         'copy:theme'
     ],
-    dist: [ 
+    dist: [
         'sass'
     ]
 };

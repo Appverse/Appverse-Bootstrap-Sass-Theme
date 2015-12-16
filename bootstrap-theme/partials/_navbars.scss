@@ -44,7 +44,7 @@
     min-width: 80px;
     width: 100px;
     margin: 0 20px !important;
-
+    padding: 15px;
     &:hover,
     &:focus {
 
@@ -212,8 +212,6 @@
     }
 
     .navbar-brand {
-      background-image: url('images/logo_inverse.png');
-
       &:hover {
         color: lighten($navbar-inverse-bg, 25%) !important;
       }
