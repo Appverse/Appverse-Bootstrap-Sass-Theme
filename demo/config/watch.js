@@ -11,7 +11,7 @@ module.exports = {
         tasks: ['coffee:test']
     },
     sass: {
-        files: ['../*.{scss,sass}','../bootstrap-theme/**/*.{scss,sass}'],
+        files: ['../*.{scss,sass}','../appverse/bootstrap-theme/**/*.{scss,sass}', '../appverse-dark/bootstrap-theme/**/*.{scss,sass}'],
         tasks: ['sass', 'autoprefixer:tmp']
     },
     styles: {

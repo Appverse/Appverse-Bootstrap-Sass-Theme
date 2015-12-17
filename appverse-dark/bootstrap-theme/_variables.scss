@@ -30,14 +30,14 @@ $brand-action:          #0098b0;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #efefef;
+$body-bg:               lighten($brand-primary, 10%);
 //** Global text color on `<body>`.
-$text-color:            $gray;
+$text-color:            $white;
 
 //** Global textual link color.
-$link-color:            $brand-primary;
+$link-color:            darken($white,15%);
 //** Link hover color set via `darken()` function.
-$link-hover-color:      darken($link-color, 15%);
+$link-hover-color:      darken($link-color, 25%);
 //** Link hover decoration.
 $link-hover-decoration: underline;
 
@@ -127,7 +127,7 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
 $headings-font-family:    $font-family-base;
 $headings-font-weight:    500;
 $headings-line-height:    1.1;
-$headings-color:          #4a4a4a;
+$headings-color:          $white;
 
 
 //== Iconography
@@ -293,7 +293,7 @@ $legend-color:                   $text-color;
 $legend-border-color:            #e5e5e5;
 
 //** Background color for textual input addons
-$input-group-addon-bg:           $gray-lighter;
+$input-group-addon-bg:           #f7f7f7;
 //** Border color for textual input addons
 $input-group-addon-border-color: $input-border;
 
@@ -438,54 +438,53 @@ $navbar-padding-horizontal:        floor(($grid-gutter-width / 2));
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2);
 $navbar-collapse-max-height:       340px;
 
-$navbar-default-color:             $text-color;
-$navbar-default-bg:                #fff;
-$navbar-default-border:            darken($navbar-default-bg, 10%);
+$navbar-default-color:                      #fff;
+$navbar-default-bg:                         $brand-primary;
+$navbar-default-border:                     darken($navbar-default-bg, 5%);
 
-// Navbar links
-$navbar-default-link-color:                $text-color;
-$navbar-default-link-hover-color:          $brand-primary;
-$navbar-default-link-hover-bg:             transparent;
-$navbar-default-link-active-color:         $brand-primary;
-$navbar-default-link-active-bg:            transparent;
-$navbar-default-link-disabled-color:       #ddd;
-$navbar-default-link-disabled-bg:          transparent;
+// Inverted navbar links
+$navbar-default-link-color:                 #fff;
+$navbar-default-link-hover-color:           lighten($navbar-default-bg, 40%);
+$navbar-default-link-hover-bg:              transparent;
+$navbar-default-link-active-color:          #fff;
+$navbar-default-link-active-bg:             darken($navbar-default-bg, 5%);
+$navbar-default-link-disabled-color:        #ccc;
+$navbar-default-link-disabled-bg:           transparent;
 
-// Navbar brand label
-$navbar-default-brand-color:               $navbar-default-link-color;
-$navbar-default-brand-hover-color:         #fff;
-$navbar-default-brand-hover-bg:            transparent;
+// Inverted navbar brand label
+$navbar-default-brand-color:                $navbar-default-link-color;
+$navbar-default-brand-hover-color:          #fff;
+$navbar-default-brand-hover-bg:             transparent;
 
-// Navbar toggle
-$navbar-default-toggle-hover-bg:           darken($navbar-default-bg, 10%);
-$navbar-default-toggle-icon-bar-bg:        #fff;
-$navbar-default-toggle-border-color:       darken($navbar-default-bg, 10%);
-
+// Inverted navbar toggle
+$navbar-default-toggle-hover-bg:            darken($navbar-default-bg, 5%);
+$navbar-default-toggle-icon-bar-bg:         #fff;
+$navbar-default-toggle-border-color:        darken($navbar-default-bg, 5%);
 
 // Inverted navbar
 // Reset inverted navbar basics
-$navbar-inverse-color:                      #fff;
-$navbar-inverse-bg:                         $brand-primary;
-$navbar-inverse-border:                     darken($navbar-inverse-bg, 5%);
+$navbar-inverse-color:             #666;
+$navbar-inverse-bg:                #fff;
+$navbar-inverse-border:            darken($navbar-default-bg, 10%);
 
-// Inverted navbar links
-$navbar-inverse-link-color:                 #fff;
-$navbar-inverse-link-hover-color:           lighten($navbar-inverse-bg, 40%);
-$navbar-inverse-link-hover-bg:              transparent;
-$navbar-inverse-link-active-color:          #fff;
-$navbar-inverse-link-active-bg:             darken($navbar-inverse-bg, 5%);
-$navbar-inverse-link-disabled-color:        #ccc;
-$navbar-inverse-link-disabled-bg:           transparent;
+// Navbar links
+$navbar-inverse-link-color:                #666;
+$navbar-inverse-link-hover-color:          $brand-primary;
+$navbar-inverse-link-hover-bg:             transparent;
+$navbar-inverse-link-active-color:         $brand-primary;
+$navbar-inverse-link-active-bg:            transparent;
+$navbar-inverse-link-disabled-color:       #ddd;
+$navbar-inverse-link-disabled-bg:          transparent;
 
-// Inverted navbar brand label
-$navbar-inverse-brand-color:                $navbar-inverse-link-color;
-$navbar-inverse-brand-hover-color:          #fff;
-$navbar-inverse-brand-hover-bg:             transparent;
+// Navbar brand label
+$navbar-inverse-brand-color:               $navbar-inverse-link-color;
+$navbar-inverse-brand-hover-color:         #fff;
+$navbar-default-brand-hover-bg:            transparent;
 
-// Inverted navbar toggle
-$navbar-inverse-toggle-hover-bg:            darken($navbar-inverse-bg, 5%);
-$navbar-inverse-toggle-icon-bar-bg:         #fff;
-$navbar-inverse-toggle-border-color:        darken($navbar-inverse-bg, 5%);
+// Navbar toggle
+$navbar-inverse-toggle-hover-bg:           darken($navbar-inverse-bg, 10%);
+$navbar-inverse-toggle-icon-bar-bg:        #fff;
+$navbar-inverse-toggle-border-color:       darken($navbar-inverse-bg, 10%);
 
 
 //== Navs
@@ -775,19 +774,19 @@ $list-group-link-heading-color: #333;
 //
 //##
 
-$panel-bg:                    #fff;
+$panel-bg:                    $body-bg;
 $panel-body-padding:          15px;
 $panel-heading-padding:       10px 15px;
 $panel-footer-padding:        $panel-heading-padding;
 $panel-border-radius:         $border-radius-base;
 
 //** Border color for elements within panels
-$panel-inner-border:          #ddd;
-$panel-footer-bg:             #f5f5f5;
+$panel-inner-border:          $brand-primary;
+$panel-footer-bg:             $brand-primary;
 
 $panel-default-text:          $text-color;
-$panel-default-border:        #ddd;
-$panel-default-heading-bg:    #f5f5f5;
+$panel-default-border:        $brand-primary;
+$panel-default-heading-bg:    $brand-primary;
 
 $panel-primary-text:          #fff;
 $panel-primary-border:        $panel-default-border;
@@ -833,8 +832,8 @@ $thumbnail-caption-padding:   9px;
 //
 //##
 
-$well-bg:                     #f5f5f5;
-$well-border:                 darken($well-bg, 7%);
+$well-bg:                     lighten($body-bg, 10%);
+$well-border:                 lighten($well-bg, 5%);
 
 
 //== Badges
@@ -863,11 +862,11 @@ $badge-border-radius:         10px;
 $breadcrumb-padding-vertical:   8px;
 $breadcrumb-padding-horizontal: 15px;
 //** Breadcrumb background color
-$breadcrumb-bg:                 #f5f5f5;
+$breadcrumb-bg:                 lighten($body-bg, 10%);
 //** Breadcrumb text color
-$breadcrumb-color:              #ccc;
+$breadcrumb-color:              #fff;
 //** Text color of current page in the breadcrumb
-$breadcrumb-active-color:       $gray;
+$breadcrumb-active-color:       #fff;
 //** Textual separator for between breadcrumb elements
 $breadcrumb-separator:          "/";
 
@@ -933,7 +932,7 @@ $blockquote-font-size:        ($font-size-base * 1.25);
 //** Blockquote border color
 $blockquote-border-color:     $gray-light;
 //** Page header border color
-$page-header-border-color:    $gray-light;
+$page-header-border-color:    $brand-primary;
 //** Width of horizontal description list titles
 $dl-horizontal-offset:        $component-offset-horizontal;
 //** Horizontal line color.

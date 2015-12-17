@@ -50,6 +50,12 @@ module.exports = {
         dest: '.tmp/styles',
         src: '**/*.css'
     },
+    images: {
+        expand: true,
+        cwd: '../appverse/bootstrap-theme/images',
+        dest: 'app/styles/images',
+        src: '**/*'
+    },
     i18n: {
         expand: true,
         cwd: '<%=paths.app%>/bower_components/angular-i18n',
@@ -69,14 +75,14 @@ module.exports = {
     },
     fontstheme: {
         expand: true,
-        cwd:'../bootstrap-theme/fonts',
+        cwd: '../appverse/bootstrap-theme/fonts',
         dest: 'app/styles/css/fonts',
         src: '**/*'
     },
     theme: {
-       expand: true,
-       cwd: '<%=paths.app%>/styles/sass/bootstrap-theme',
-       dest: 'app/styles/css/',
-       src: ['fonts/*', 'images/*']
-   }
+        expand: true,
+        cwd: '<%=paths.app%>/styles/sass/bootstrap-theme',
+        dest: 'app/styles/css/',
+        src: ['fonts/*', 'images/*']
+    }
 };

@@ -1,0 +1,143 @@
+//DATEPICKER CALENDAR STYLES
+//DATEPICKER
+.datepicker {
+  border-radius: 4px;
+  box-shadow: 0 1 3px rgba(0,0,0,.3);
+
+  table {
+    outline: none;
+    display: inline-block;
+    padding: .8em;
+  }
+
+  .glyphicon-chevron-left {
+    &:before {
+      content: '\e091';
+    }
+  }
+
+  .glyphicon-chevron-right {
+    &:before {
+      content: '\e092';
+    }
+  }
+
+  .btn {
+    background: none;
+    outline: none !important;
+    background-color: transparent;
+    color: $text-color;
+    border: none;
+    padding: .4em .8em;
+
+    .text-info {
+      color: $brand-primary;
+    }
+
+    span {
+      display: inline-block;
+      padding: .2em .4em;
+      border-radius: 50%;
+    }
+
+    &:hover {
+      background-color: transparent;
+
+      span {
+        color: $white;
+        background-color: $gray-light;
+      }
+
+      .text-muted {
+        color: #eee;
+      }
+    }
+
+    &.active {
+      background-color: transparent;
+      box-shadow: none;
+
+      span {
+        background-color: $brand-primary;
+        color: #fff;
+      }
+
+      .text-info {
+        color: #fff;
+      }
+    }
+
+    &[disabled] {
+      &:hover {
+        background-color: transparent;
+        color: $text-color;
+
+        span {
+          background-color: transparent;
+          color: $text-color;
+        }
+      }
+    }
+  }
+
+  thead {
+    tr:first-child {
+      .btn {
+        &:hover {
+          background-color: $gray-light;
+        }
+      }
+    }
+  }
+}
+
+.datepicker + .input-group-btn {
+  .btn {
+    background-color: #f7f7f7;
+    border: 1px solid $input-border;
+    color: $gray-light;
+
+    &:hover {
+      background-color: darken($input-border, 2%);
+      border-color: #969696;
+      color: darken($gray-light, 10%);
+    }
+
+    &:active {
+      outline: none;
+    }
+  }
+}
+
+.dropdown-menu {
+  &.ng-valid-date,
+  &.ng-invalid-date,
+  &.ng-valid-date-disabled {
+    background: none;
+    background-color: #fff;
+
+    li[ng-if="showButtonBar"] {
+      @extend .clearfix;
+      padding-top: 0 !important;
+      padding-bottom: .4em !important;
+
+      .btn {
+        background: none;
+        border-radius: $border-radius-base !important;
+        color: $text-color;
+        border-color: lighten($text-color, 25%);
+
+        &:hover {
+          background-color: $gray-light;
+          color: $white;
+        }
+      }
+
+      .btn-group {
+        .btn:first-child {
+          margin-right: .5em;
+        }
+      }
+    }
+  }
+}

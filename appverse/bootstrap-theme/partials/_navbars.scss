@@ -45,6 +45,7 @@
     width: 100px;
     margin: 0 20px !important;
     padding: 15px;
+    @include bgimage('../images/logo.png', contain, center, no-repeat);
     &:hover,
     &:focus {
 
@@ -212,6 +213,7 @@
     }
 
     .navbar-brand {
+      @include bgimage('../images/logo_inverse.png', contain, center, no-repeat);
       &:hover {
         color: lighten($navbar-inverse-bg, 25%) !important;
       }

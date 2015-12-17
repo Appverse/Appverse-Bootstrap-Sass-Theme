@@ -28,14 +28,25 @@
     background-color: transparent;
     color: $text-color;
     border: none;
+    padding: .4em .8em;
 
     .text-info {
       color: $brand-primary;
     }
 
+    span {
+      display: inline-block;
+      padding: .2em .4em;
+      border-radius: 50%;
+    }
+
     &:hover {
-      color: $white;
-      background-color: $gray-light;
+      background-color: transparent;
+
+      span {
+        color: $white;
+        background-color: $gray-light;
+      }
 
       .text-muted {
         color: #eee;
@@ -43,9 +54,13 @@
     }
 
     &.active {
+      background-color: transparent;
       box-shadow: none;
-      background-color: $brand-primary;
-      color: #fff;
+
+      span {
+        background-color: $brand-primary;
+        color: #fff;
+      }
 
       .text-info {
         color: #fff;
@@ -56,6 +71,21 @@
       &:hover {
         background-color: transparent;
         color: $text-color;
+
+        span {
+          background-color: transparent;
+          color: $text-color;
+        }
+      }
+    }
+  }
+
+  thead {
+    tr:first-child {
+      .btn {
+        &:hover {
+          background-color: $gray-light;
+        }
       }
     }
   }
