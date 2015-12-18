@@ -667,7 +667,7 @@ $modal-title-padding:         15px;
 $modal-title-line-height:     $line-height-base;
 
 //** Background color of modal content area
-$modal-content-bg:                             #fff;
+$modal-content-bg:                             $body-bg; 
 //** Modal content border color
 $modal-content-border-color:                   transparent;
 //** Modal content border color **for IE8**
@@ -845,7 +845,7 @@ $badge-link-hover-color:      lighten($brand-primary, 10%);
 $badge-bg:                    #fff;
 
 //** Badge text color in active nav link
-$badge-active-color:          $link-color;
+$badge-active-color:          $brand-primary;
 //** Badge background color in active nav link
 $badge-active-bg:             #fff;
 
