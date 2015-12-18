@@ -1,7 +1,7 @@
 //TAB PANEL
 .nav-tabs {
-    background-color: #fff;
-    border: 1px solid #e1e1e4;
+    background-color: $brand-primary;
+    border: 1px solid darken($brand-primary, 10%);
 
     >li {
         a {
@@ -9,33 +9,33 @@
             color: $text-color;
 
             &:hover {
-                color: $brand-primary;
+                color: lighten($brand-primary, 35%);
             }
         }
 
         &.active {
             a {
                 border: none;
-                border-bottom: 3px solid $brand-primary;
+                border-bottom: 3px solid $white;
 
                 &:hover {
                     border: none;
-                    border-bottom: 3px solid $brand-primary;
+                    border-bottom: 3px solid $white;
                 }
             }
         }
     }
 
     .dropdown-menu {
-        background-color: #fff;
+        background-color: $brand-primary;
 
         >li {
             >a {
                 color: $text-color;
 
                 &:hover {
-                    background-color: $brand-primary;
-                    color: #fff;
+                    background-color: $white;
+                    color: $brand-primary;
                 }
             }
 
@@ -47,7 +47,7 @@
 }
 
 .tab-pane {
-    background-color: #fff;
+    background-color: $brand-primary;
     padding: 1em;
 }
 
@@ -55,5 +55,5 @@
 
 .nav-tabs>li.active a:focus {
     border: none;
-    border-bottom: 3px solid #213e7f;
+    border-bottom: 3px solid $white;
 }

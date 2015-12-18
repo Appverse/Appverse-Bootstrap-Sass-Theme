@@ -6,58 +6,58 @@
     tr {
         th {
             text-transform: uppercase;
-            color: #a6a6a6;
+            color: $text-color;
             font-weight: 200;
         }
 
         td {
-            color: #606060;
+            color: $text-color;
         }
 
         &.info {
             td {
-                background-color: #cadfed !important;
+                background-color: $brand-info !important;
             }
 
             &:hover {
                 td {
-                    background-color: darken(#cadfed, 5%) !important;
+                    background-color: darken($brand-info, 5%) !important;
                 }
             }
         }
 
         &.danger {
             td {
-                background-color: #fcebe8 !important;
+                background-color: $brand-danger !important;
             }
 
             &:hover {
                 td {
-                    background-color: darken(#fcebe8, 5%) !important;
+                    background-color: darken($brand-danger, 5%) !important;
                 }
             }
         }
 
         &.success {
             td {
-                background-color: #ecfce8 !important;
+                background-color: $brand-success !important;
             }
 
             &:hover {
                 td {
-                    background-color: darken(#ecfce8, 5%) !important;
+                    background-color: darken($brand-success, 5%) !important;
                 }
             }
         }
 
         &.warning {
             td {
-                background-color: #fdf5cb !important;
+                background-color: $brand-warning !important;
             }
 
             &:hover {
                 td {
-                    background-color: darken(#fdf5cb, 5%) !important;
+                    background-color: darken($brand-warning, 5%) !important;
                 }
             }
         }

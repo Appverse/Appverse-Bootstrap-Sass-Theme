@@ -17,7 +17,7 @@ uib-accordion {
 
         .panel-heading {
             padding: 13px 15px;
-            background-color: #fff;
+            background-color: $brand-primary;
             border-color: $list-group-border;
 
             &:hover {
@@ -25,7 +25,7 @@ uib-accordion {
             }
 
             .panel-title {
-                color: #213e7f;
+                color: $white;
                 font-weight: 500;
                 font-size: 14px;
 

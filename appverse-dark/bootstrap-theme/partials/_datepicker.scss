@@ -31,7 +31,7 @@
     padding: .4em .8em;
 
     .text-info {
-      color: $brand-primary;
+      color: lighten($brand-primary, 35%);
     }
 
     span {
@@ -45,7 +45,7 @@
 
       span {
         color: $white;
-        background-color: $gray-light;
+        background-color: $body-bg;
       }
 
       .text-muted {
@@ -58,12 +58,18 @@
       box-shadow: none;
 
       span {
-        background-color: $brand-primary;
-        color: #fff;
+        background-color: $white;
+        color: $brand-primary;
       }
 
       .text-info {
-        color: #fff;
+        color: lighten($brand-primary, 35%);
+      }
+
+      &:hover {
+        span {
+          color: $brand-primary;
+        }
       }
     }
 
@@ -84,7 +90,7 @@
     tr:first-child {
       .btn {
         &:hover {
-          background-color: $gray-light;
+          background-color: $body-bg;
         }
       }
     }
@@ -93,13 +99,13 @@
 
 .datepicker + .input-group-btn {
   .btn {
-    background-color: #f7f7f7;
+    background-color: darken($brand-primary, 5%);
     border: 1px solid $input-border;
     color: $gray-light;
 
     &:hover {
-      background-color: darken($input-border, 2%);
-      border-color: #969696;
+      background-color: darken($brand-primary, 8%);
+      border-color: lighten($brand-primary, 25%);
       color: darken($gray-light, 10%);
     }
 
@@ -114,7 +120,7 @@
   &.ng-invalid-date,
   &.ng-valid-date-disabled {
     background: none;
-    background-color: #fff;
+    background-color: $brand-primary;
 
     li[ng-if="showButtonBar"] {
       @extend .clearfix;
@@ -128,7 +134,7 @@
         border-color: lighten($text-color, 25%);
 
         &:hover {
-          background-color: $gray-light;
+          background-color: darken($brand-primary, 10%);
           color: $white;
         }
       }

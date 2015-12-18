@@ -21,7 +21,7 @@
 //INPUT STYLES
 .form-control {
     &:hover {
-        border-color: lighten($text-color,25%);
+        border-color: lighten($brand-primary, 25%);
     }
 
     &:focus {
@@ -34,7 +34,7 @@
 
     &[disabled] {
         &:hover {
-            border-color: #dbdbdd;
+            border-color: $input-border;
         }
     }
 }
@@ -179,18 +179,18 @@ select.form-control {
                 }
 
                 .check {
-                    color: #213e7f;
-                    border-color: #213e7f;
+                    color: $white;
+                    border-color: $white;
 
                     &:before {
-                        color: #213e7f;
+                        color: $white;
                         box-shadow: 0 0 0 10px,10px -10px 0 10px,32px 0 0 20px,0 32px 0 20px,-5px 5px 0 10px,20px -12px 0 11px;
                         -webkit-animation: checkbox-on .3s forwards;
                         animation: checkbox-on .3s forwards;
                     }
 
                     &:after {
-                        background-color: #213e7f;
+                        background-color: $white;
                         -webkit-animation: rippleOn 500ms forwards;
                         animation: rippleOn 500ms forwards;
                     }
@@ -213,7 +213,7 @@ select.form-control {
                 overflow: hidden;
                 z-index: 1;
                 border-color: #d6d6d6;
-                color: #213e7f;
+                color: $white;
 
                 &:before {
                     position: absolute;
@@ -266,11 +266,11 @@ select.form-control {
 
             &:checked {
                 &~.circle {
-                    border-color: #213e7f;
+                    border-color: $white;
                 }
 
                 &~.check {
-                    background-color: #213e7f;
+                    background-color: $white;
                     -webkit-transform: scale3d(.55,.55,1);
                     transform: scale3d(.55,.55,1);
 
