@@ -17,5 +17,6 @@
   },
   "scripts": {
     "package": "grunt"
-  }
+  },
+  "license": "MPL-2.0"
 }

@@ -1,4 +1,4 @@
-{ 
+{
     "timeout": 300000,
     "registry": {
         "register": "http://appverse-iac.gftlabs.com:5678/",
