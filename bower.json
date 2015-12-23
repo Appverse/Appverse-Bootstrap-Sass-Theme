@@ -12,6 +12,5 @@
     "node_modules",
     "Gruntfile.js",
     ".bowerrc"
-  ],
-  "license": "MPL-2.0"
+  ] 
 }
