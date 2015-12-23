@@ -21,6 +21,12 @@
         .run(function ($log, $rootScope, $state, uibDatepickerConfig, $http, $filter) {
             $log.debug('theme run');
             uibDatepickerConfig.showWeeks = false;
+
+            //Left side menu toggle.
+            $("#menu-toggle").click(function(e) {
+              e.preventDefault();
+              $("#wrapper").toggleClass("toggled");
+            });
         });
     AppInit.setConfig({});
 
