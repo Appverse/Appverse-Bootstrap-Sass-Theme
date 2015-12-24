@@ -55,6 +55,11 @@
                             url: '/ui-select',
                             templateUrl: 'components/ui-select/ui-select.html',
                             controller: 'UISelectController'
+                        })
+                        .state('icons', {
+                            url: '/icons',
+                            templateUrl: 'components/icons/icons.html',
+                            controller: 'IconsController'
                         });
                 }
             ]);

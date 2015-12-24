@@ -97,6 +97,9 @@
                               <li data-ng-class="{ active: $state.includes('ui-select') }">
                                     <a angular-ripple="" ui-sref="ui-select"><i class="glyphicon glyphicon-triangle-bottom"></i> UI-Select</a>
                               </li>
+                              <li data-ng-class="{ active: $state.includes('icons') }">
+                                    <a angular-ripple="" ui-sref="icons"><i class="glyphicon glyphicon-th"></i> UI-Select</a>
+                              </li>
                         </ul>
                   </div>
             </nav>
@@ -121,6 +124,9 @@
                         </li>
                         <li data-ng-class="{ active: $state.includes('ui-select')}">
                               <a angular-ripple="" ui-sref="ui-select"><i class="glyphicon glyphicon-triangle-bottom"></i><span class="text">UI-Select</span></a>
+                        </li>
+                        <li data-ng-class="{ active: $state.includes('icons')}">
+                              <a angular-ripple="" ui-sref="icons"><i class="glyphicon glyphicon-th"></i><span class="text">UI-Select</span></a>
                         </li>
                   </ul>
                   <a href="#menu-toggle" angular-ripple class="btn btn-primary menu-toggle" id="menu-toggle">
@@ -171,6 +177,8 @@
       <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
       <script src="bower_components/Chart.js/Chart.min.js"></script>
       <script src="bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
+      <script src="bower_components/svg-morpheus/compile/minified/svg-morpheus.js"></script>
+      <script src="bower_components/angular-material-icons/angular-material-icons.min.js"></script>
       <script src="app.js"></script>
       <script src="states/app-states.js"></script>
       <!-- endbuild -->
@@ -178,6 +186,7 @@
       <!-- Controllers -->
       <script src="components/ui-bootstrap/uibootstrap-controller.js"></script>
       <script src="components/ui-select/uiselect-controller.js"></script>
+      <script src="components/icons/icons-controller.js"></script>
       <!-- EO Controllers -->
 
 </body>

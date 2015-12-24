@@ -16,161 +16,157 @@
 // WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT(INCLUDING NEGLIGENCE OR OTHERWISE)
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
-
 //REGULAR GRID
-
 .table {
-    border-radius: 5px;
+  border-radius: 5px;
 
-    tr {
-        th {
-            text-transform: uppercase;
-            color: $text-color;
-            font-weight: 200;
-        }
-
-        td {
-            color: $text-color;
-        }
-
-        &.info {
-            td {
-                background-color: $brand-info !important;
-            }
-
-            &:hover {
-                td {
-                    background-color: darken($brand-info, 5%) !important;
-                }
-            }
-        }
-
-        &.danger {
-            td {
-                background-color: $brand-danger !important;
-            }
-
-            &:hover {
-                td {
-                    background-color: darken($brand-danger, 5%) !important;
-                }
-            }
-        }
-
-        &.success {
-            td {
-                background-color: $brand-success !important;
-            }
-
-            &:hover {
-                td {
-                    background-color: darken($brand-success, 5%) !important;
-                }
-            }
-        }
-
-        &.warning {
-            td {
-                background-color: $brand-warning !important;
-            }
-
-            &:hover {
-                td {
-                    background-color: darken($brand-warning, 5%) !important;
-                }
-            }
-        }
+  tr {
+    th {
+      text-transform: uppercase;
+      color: $text-color;
+      font-weight: 200;
     }
+
+    td {
+      color: $text-color;
+    }
+
+    &.info {
+      td {
+        background-color: $brand-info !important;
+      }
+
+      &:hover {
+        td {
+          background-color: darken($brand-info, 5%) !important;
+        }
+      }
+    }
+
+    &.danger {
+      td {
+        background-color: $brand-danger !important;
+      }
+
+      &:hover {
+        td {
+          background-color: darken($brand-danger, 5%) !important;
+        }
+      }
+    }
+
+    &.success {
+      td {
+        background-color: $brand-success !important;
+      }
+
+      &:hover {
+        td {
+          background-color: darken($brand-success, 5%) !important;
+        }
+      }
+    }
+
+    &.warning {
+      td {
+        background-color: $brand-warning !important;
+      }
+
+      &:hover {
+        td {
+          background-color: darken($brand-warning, 5%) !important;
+        }
+      }
+    }
+  }
 }
 
 /*NG-GRID STYLES*/
 .ng-grid-header {
-    padding: 15px;
-    background: #fff;
-    border-radius: 5px 5px 0 0;
-    border: 1px solid $ng-grid-border-color;
+  padding: 15px;
+  background: #fff;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid $ng-grid-border-color;
 }
 
 .ngGrid {
-    border-radius: 5px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border: 1px solid $ng-grid-border-color;
+  border-top: none;
+  background-color: $ng-grid-bg;
+  min-height: 400px;
 
-    &.gridStyle {
-        border: 1px solid $ng-grid-border-color;
-        border-top: none;
-        background-color: $ng-grid-bg;
+  .ngTopPanel {
+    background-color: transparent;
+  }
+
+  .ngHeaderCell {
+    text-transform: uppercase;
+    color: #a6a6a6;
+    font-weight: 200;
+    background-color: transparent;
+    border-bottom: 1px solid $ng-grid-border-color;
+
+    .ngHeaderText {
+      padding: $ng-grid-cell-padding;
     }
+  }
 
-    .ngTopPanel {
-        background-color: transparent;
-    }
+  .ngRow {
+    background-color: transparent;
 
-    .ngHeaderCell {
-        text-transform: uppercase;
-        color: #a6a6a6;
-        font-weight: 200;
-        background-color: transparent;
-        border-bottom: 1px solid $ng-grid-border-color;
+    .ngCell {
+      color: #606060;
+      background-color: transparent;
+      border-bottom: 1px solid $ng-grid-border-color;
 
-        .ngHeaderText {
-            padding: $ng-grid-cell-padding;
+      .ngCellText {
+        padding: $ng-grid-cell-padding;
+      }
+
+      &:last-child {
+        .ngCellText {
+          padding: 12px 20px;
         }
+      }
     }
+  }
 
-    .ngRow {
-        background-color: transparent;
+  .ngVerticalBar {
+    display: none;
+  }
 
-        .ngCell {
-            color: #606060;
-            background-color: transparent;
-            border-bottom: 1px solid $ng-grid-border-color;
+  .ngTotalSelectContainer {
+    margin-right: 20px;
+    font-size: 12px;
+    margin-top: 15px;
+  }
 
-            .ngCellText {
-                padding: $ng-grid-cell-padding;
-            }
+  .ngSortButtonDown,
+  .ngSortButtonUp {
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    right: initial;
+    height: 0;
+    width: 0;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+  }
 
-            &:last-child {
-                .ngCellText {
-                    padding: 12px 20px;
-                }
-            }
-        }
-    }
+  .ngSortButtonDown:after {
+    content: '\e093';
+  }
 
-    .ngVerticalBar {
-        display: none;
-    }
-
-    .ngTotalSelectContainer {
-        margin-right: 20px;
-        font-size: 12px;
-        margin-top: 15px;
-    }
-
-    .ngSortButtonDown,
-    .ngSortButtonUp {
-        position: absolute;
-        top: 50%;
-        margin-top: -6px;
-        margin-left: auto;
-        margin-right: auto;
-        border: none;
-        right: initial;
-        height: 0;
-        width: 0;
-        font-family: 'Glyphicons Halflings';
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1;
-        -webkit-font-smoothing: antialiased;
-    }
-
-    .ngSortButtonDown:after {
-        content: '\e093';
-    }
-
-    .ngSortButtonUp:after {
-        content: '\e094';
-    }
+  .ngSortButtonUp:after {
+    content: '\e094';
+  }
 }

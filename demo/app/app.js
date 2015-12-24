@@ -16,7 +16,8 @@
             'chart.js',
             'angular.filter',
             'appverse.router',
-            'appverse'
+            'appverse',
+            'ngMdIcons'
         ])
         .run(function ($log, $rootScope, $state, uibDatepickerConfig, $http, $filter) {
             $log.debug('theme run');
