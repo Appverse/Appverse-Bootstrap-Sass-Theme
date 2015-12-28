@@ -16,7 +16,6 @@
 // WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT(INCLUDING NEGLIGENCE OR OTHERWISE)
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
-
 //SIDEBAR STYLES
 /*!
  * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
@@ -38,9 +37,10 @@
     height: calc(100% - 60px);
     margin-left: -250px;
     overflow-y: auto;
-    background: $brand-primary;
+    background: $body-bg;
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
+    border-right: 1px solid $brand-primary;
   }
 
   #page-content-wrapper {
@@ -83,7 +83,7 @@
       padding: 1em;
       display: block;
       text-decoration: none;
-      color: $white;
+      color: $brand-primary;
 
       i {
         margin-right: 1em;
@@ -134,8 +134,8 @@
 
     &.active {
       a {
-        background-color: $white;
-        color: $brand-primary;
+        background-color: $brand-primary;
+        color: $body-bg;
       }
     }
   }
@@ -145,10 +145,10 @@
     font-size: toUnit(18px, 14px, 'em');
 
     a {
-      color: $white;
+      color: $brand-primary;
 
       &:hover {
-        color: $white;
+        color: $brand-primary;
         background: none;
       }
     }
@@ -180,16 +180,22 @@
   bottom: 0;
   border-radius: 0;
   border: none;
+  background-color: $body-bg;
 
   i {
     transition: all .3s linear;
+    color: $brand-primary;
+  }
+
+  &:hover {
+    background-color: $white;
   }
 
   &:focus {
-    background-color: $brand-primary;
+    background-color: $body-bg;
 
     &:hover {
-      background-color: darken($brand-primary, 5%);
+      background-color: $white;
     }
   }
 }
@@ -201,6 +207,18 @@
     }
   }
 }
+
+//SIDEBAR MENU ITEMS TOOLTIP WHEN SMALL
+.side-menu-tooltip {
+  display: none !important;
+}
+
+.toggled {
+  .side-menu-tooltip {
+    display: block !important;
+    margin-left: -205px !important;
+  }
+} 
 
 @media (max-width:768px) {
   #wrapper {

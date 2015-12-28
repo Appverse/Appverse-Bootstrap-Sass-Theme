@@ -24,9 +24,22 @@
             uibDatepickerConfig.showWeeks = false;
 
             //Left side menu toggle.
-            $("#menu-toggle").click(function(e) {
-              e.preventDefault();
-              $("#wrapper").toggleClass("toggled");
+            $("#menu-toggle")
+                .click(function (e) {
+                    e.preventDefault();
+                    $("#wrapper")
+                        .toggleClass("toggled");
+                    $("body").toggleClass("toggled");
+                });
+            $(window).resize(function () {
+                  if($(window).width() <= 768){
+                      $("#wrapper").addClass("toggled");
+                      $("body").addClass("toggled");
+                  }
+                  else{
+                      $("#wrapper").removeClass("toggled");
+                      $("body").removeClass("toggled");
+                  }
             });
         });
     AppInit.setConfig({});

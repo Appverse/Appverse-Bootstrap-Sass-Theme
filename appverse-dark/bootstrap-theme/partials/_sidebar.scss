@@ -201,6 +201,18 @@
   }
 }
 
+//SIDEBAR MENU ITEMS TOOLTIP WHEN SMALL
+.side-menu-tooltip {
+  display: none !important;
+}
+
+.toggled {
+  .side-menu-tooltip {
+    display: block !important;
+    margin-left: -205px !important;
+  }
+}
+
 @media (max-width:768px) {
   #wrapper {
     padding-left: 65px;

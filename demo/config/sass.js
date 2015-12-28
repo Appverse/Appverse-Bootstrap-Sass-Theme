@@ -10,7 +10,7 @@ module.exports = {
     server: {
         files: [{
             expand: true,
-            cwd: '../appverse-dark',
+            cwd: '../appverse',
             src: '*.{scss,sass}',
             dest: '<%=paths.app%>/styles/css',
             ext: '.css'
