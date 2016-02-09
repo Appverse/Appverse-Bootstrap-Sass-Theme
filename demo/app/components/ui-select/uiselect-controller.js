@@ -42,7 +42,6 @@ angular.module('App')
             $scope.country.selected = undefined;
         };
 
-
         $scope.address = {};
         $scope.refreshAddresses = function (address) {
             var params = {
