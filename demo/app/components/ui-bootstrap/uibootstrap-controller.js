@@ -27,16 +27,13 @@ angular.module('App')
 
         /*COLLAPSIBLE MENU*/
         $scope.oneAtATime = true;
-        $scope.groups = [
-            {
-                title: 'Dynamic Group Header - 1',
-                content: 'Dynamic Group Body - 1'
-                    },
-            {
-                title: 'Dynamic Group Header - 2',
-                content: 'Dynamic Group Body - 2'
-                    }
-                ];
+        $scope.groups = [{
+            title: 'Dynamic Group Header - 1',
+            content: 'Dynamic Group Body - 1'
+        }, {
+            title: 'Dynamic Group Header - 2',
+            content: 'Dynamic Group Body - 2'
+        }];
 
         $scope.status = {
             isFirstOpen: true,
@@ -104,23 +101,22 @@ angular.module('App')
         tomorrow.setDate(tomorrow.getDate() + 1);
         var afterTomorrow = new Date();
         afterTomorrow.setDate(tomorrow.getDate() + 2);
-        $scope.events = [
-            {
-                date: tomorrow,
-                status: 'full'
-                            },
-            {
-                date: afterTomorrow,
-                status: 'partially'
-                            }
-                        ];
+        $scope.events = [{
+            date: tomorrow,
+            status: 'full'
+        }, {
+            date: afterTomorrow,
+            status: 'partially'
+        }];
 
         $scope.getDayClass = function (date, mode) {
             if (mode === 'day') {
-                var dayToCheck = new Date(date).setHours(0, 0, 0, 0);
+                var dayToCheck = new Date(date)
+                    .setHours(0, 0, 0, 0);
 
                 for (var i = 0; i < $scope.events.length; i++) {
-                    var currentDay = new Date($scope.events[i].date).setHours(0, 0, 0, 0);
+                    var currentDay = new Date($scope.events[i].date)
+                        .setHours(0, 0, 0, 0);
 
                     if (dayToCheck === currentDay) {
                         return $scope.events[i].status;
@@ -161,7 +157,6 @@ angular.module('App')
             $scope.animationsEnabled = !$scope.animationsEnabled;
         };
 
-
         /*EO MODALS*/
 
         /*PAGINATION*/
@@ -183,19 +178,17 @@ angular.module('App')
         /*EO TOOLTIPS*/
 
         /*TABS*/
-        $scope.tabs = [
-            {
-                title: 'Dynamic Title 1',
-                content: 'Dynamic content 1'
-                },
-            {
-                title: 'Dynamic Title 2',
-                content: 'Dynamic content 2',
-                disabled: true
-                }
-                ];
+        $scope.tabs = [{
+            title: 'Dynamic Title 1',
+            content: 'Dynamic content 1'
+        }, {
+            title: 'Dynamic Title 2',
+            content: 'Dynamic content 2',
+            disabled: true
+        }];
         setTimeout(function () {
-            $('.tab-content').addClass('myslide');
+            $('.tab-content')
+                .addClass('myslide');
         }, 500);
         /*EO TABS*/
     }

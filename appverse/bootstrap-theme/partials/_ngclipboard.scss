@@ -16,36 +16,23 @@
 // WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT(INCLUDING NEGLIGENCE OR OTHERWISE)
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
+//NGCLIPBOARD BUTTON STYLES
+.tab-pane {
+  position: relative;
+}
 
-//PARTIALS BY COMPONENTS
-@import 'partials/mixins';
-@import 'partials/helpers';
-@import 'partials/viewport';
-@import 'partials/images';
-@import 'partials/text';
-@import 'partials/alerts';
-@import 'partials/links';
-@import 'partials/navbars';
-@import 'partials/headers';
-@import 'partials/panels';
-@import 'partials/form_components';
-@import 'partials/footer';
-@import 'partials/tabs';
-@import 'partials/lists';
-@import 'partials/grids';
-@import 'partials/modals';
-@import 'partials/datepicker';
-@import 'partials/tooltips';
-@import 'partials/animations';
-@import 'partials/buttons';
-@import 'partials/sliders';
-@import 'partials/pagination';
-@import 'partials/nav_pills';
-@import 'partials/jumbotron';
-@import 'partials/carousel';
-@import 'partials/charts';
-@import 'partials/icons';
-@import 'partials/breadcrumbs';
-@import 'partials/sidebar';
-@import 'partials/hljs';
-@import 'partials/ngclipboard';
+.hljs {
+  padding-right: 80px;
+}
+
+button[ngclipboard] {
+  position: absolute;
+  right: 1.05em;
+  top: 1.1em;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+
+  svg {
+    fill: $white;
+  }
+}

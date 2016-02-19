@@ -17,7 +17,9 @@
             'angular.filter',
             'appverse.router',
             'appverse',
-            'ngMdIcons'
+            'ngMdIcons',
+            'hljs',
+            'ngclipboard'
         ])
         .run(function ($log, $rootScope, $state, uibDatepickerConfig, $http, $filter) {
             $log.debug('theme run');

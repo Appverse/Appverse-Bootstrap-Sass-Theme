@@ -1,127 +1,274 @@
 <!DOCTYPE HTML>
-<div scrolly-scroll class="mb-lg">
+<div class="mb-lg" scrolly-scroll>
 
-      <div class="page-header" id="banner">
-            <div class="row">
-                  <div class="col-lg-8 col-md-7 col-sm-6">
-                        <h1>UI Bootstrap</h1>
-                        <p class="lead">Samples</p>
-                  </div>
-                  <div class="col-lg-4 col-md-5 col-sm-6">
-                        <div class="sponsor text-right mt-md">
-                              <img src="styles/images/logo.png" alt="Appverse HTML5 Powered" title="Appverse HTML5 Powered">
-                        </div>
-                  </div>
+    <div class="page-header" id="banner">
+        <div class="row">
+            <div class="col-lg-8 col-md-7 col-sm-6">
+                <h1>UI Bootstrap</h1>
+                <p class="lead">Samples</p>
             </div>
-      </div>
-
-      <div class="panel panel-primary">
-            <div class="panel-heading">Explanation</div>
-            <div class="panel-body">
-                  <p>UI Bootstrap components with Appverse theme applied.</p>
-                  <p>More examples and code snippets on the <a href="https://angular-ui.github.io/bootstrap" target="_blank">official website</a>.</p>
+            <div class="col-lg-4 col-md-5 col-sm-6">
+                <div class="sponsor text-right mt-md">
+                    <img alt="Appverse HTML5 Powered" src="styles/images/logo.png" title="Appverse HTML5 Powered">
+                </div>
             </div>
-      </div>
+        </div>
+    </div>
 
-      <div class="page-header">
-            <h1>Collapsible Panels</h1>
-      </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">Explanation</div>
+        <div class="panel-body">
+            <p>UI Bootstrap components with Appverse theme applied.</p>
+            <p>More examples and code snippets on the
+                <a href="https://angular-ui.github.io/bootstrap" target="_blank">official website</a>.</p>
+        </div>
+    </div>
 
-      <p><b>Only one at a time</b></p>
+    <div class="page-header">
+        <h1>Collapsible Panels</h1>
+    </div>
 
-      <uib-accordion close-others="oneAtATime">
-            <uib-accordion-group heading="Static Header, initially expanded" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
-                  This content is straight in the template.
-            </uib-accordion-group>
-            <uib-accordion-group heading="{{group.title}}" ng-repeat="group in groups">
-                  {{group.content}}
-            </uib-accordion-group>
-      </uib-accordion>
+    <p>
+        <b>Only one at a time</b>
+    </p>
 
-      <p><b>All at the same time</b></p>
+    <uib-accordion close-others="oneAtATime">
+        <uib-accordion-group heading="Static Header, initially expanded" is-disabled="status.isFirstDisabled" is-open="status.isFirstOpen">
+            This content is straight in the template.
+        </uib-accordion-group>
+        <uib-accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+            {{group.content}}
+        </uib-accordion-group>
+    </uib-accordion>
 
-      <uib-accordion close-others="">
-            <uib-accordion-group heading="Static Header, initially expanded" is-open="status2.isFirstOpen" is-disabled="status2.isFirstDisabled">
-                  This content is straight in the template.
-            </uib-accordion-group>
-            <uib-accordion-group heading="{{group.title}}" ng-repeat="group in groups">
-                  {{group.content}}
-            </uib-accordion-group>
-      </uib-accordion>
+    <uib-tabset class="mb-md">
+        <uib-tab heading="HTML">
+            <button class="btn btn-action" data-clipboard-target="#uib-accordion-html" ngclipboard>
+                <ng-md-icon icon="content_copy" size="16"></ng-md-icon>
+            </button>
+            <pre hljs include="'components/ui-bootstrap/uib-accordion-code.html'" language="html" id="uib-accordion-html"></pre>
+        </uib-tab>
+        <uib-tab heading="JS">
+            <button class="btn btn-action" data-clipboard-target="#uib-accordion-js" ngclipboard>
+                <ng-md-icon icon="content_copy" size="16"></ng-md-icon>
+            </button>
+            <pre hljs include="'components/ui-bootstrap/uib-accordion-code.js'" language="javascript" id="uib-accordion-js"></pre>
+        </uib-tab>
+    </uib-tabset>
 
-      <div class="page-header">
-            <h1>Carousel</h1>
-      </div>
+    <p>
+        <b>All at the same time</b>
+    </p>
 
-      <div class="row">
-            <div class="col-md-6">
-                  <uib-carousel interval="myInterval">
-                        <uib-slide ng-repeat="slide in slides" active="slide.active">
-                              <img ng-src="{{slide.image}}" style="margin:auto;">
-                              <div class="carousel-caption">
-                                    <h4>Slide {{$index}}</h4>
-                                    <p>{{slide.text}}</p>
-                              </div>
-                        </uib-slide>
-                  </uib-carousel>
-            </div>
-      </div>
+    <uib-accordion close-others="">
+        <uib-accordion-group heading="Static Header, initially expanded" is-disabled="status2.isFirstDisabled" is-open="status2.isFirstOpen">
+            This content is straight in the template.
+        </uib-accordion-group>
+        <uib-accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+            {{group.content}}
+        </uib-accordion-group>
+    </uib-accordion>
 
-      <div class="page-header">
-            <h1>Datepicker</h1>
-      </div>
+    <uib-tabset class="mb-md">
+        <uib-tab heading="HTML">
+            <button class="btn btn-action" data-clipboard-target="#uib-accordion-all-html" ngclipboard>
+                <ng-md-icon icon="content_copy" size="16"></ng-md-icon>
+            </button>
+            <pre hljs include="'components/ui-bootstrap/uib-accordion-all-code.html'" language="html" id="uib-accordion-all-html"></pre>
+        </uib-tab>
+        <uib-tab heading="JS">
+            <button class="btn btn-action" data-clipboard-target="#uib-accordion-all-js" ngclipboard>
+                <ng-md-icon icon="content_copy" size="16"></ng-md-icon>
+            </button>
+            <pre hljs include="'components/ui-bootstrap/uib-accordion-all-code.js'" language="javascript" id="uib-accordion-all-js"></pre>
+        </uib-tab>
+    </uib-tabset>
 
-      <p><b>Inline</b></p>
+    <div class="page-header">
+        <h1>Carousel</h1>
+    </div>
 
-      <div>
-            <uib-datepicker ng-model="dt" min-date="minDate" show-weeks="false" class="datepicker" custom-class="getDayClass(date, mode)"></uib-datepicker>
-      </div>
+    <div class="row">
+        <div class="col-md-6">
+            <uib-carousel interval="myInterval">
+                <uib-slide active="slide.active" ng-repeat="slide in slides">
+                    <img ng-src="{{slide.image}}" style="margin:auto;">
+                    <div class="carousel-caption">
+                        <h4>Slide
+                            {{$index}}</h4>
+                        <p>{{slide.text}}</p>
+                    </div>
+                </uib-slide>
+            </uib-carousel>
+        </div>
+    </div>
+    <uib-tabset class="mb-md mt-md">
+        <uib-tab heading="HTML">
+            <button class="btn btn-action" data-clipboard-target="#uib-carousel-html" ngclipboard>
+                <ng-md-icon icon="content_copy" size="16"></ng-md-icon>
+            </button>
+            <pre hljs include="'components/ui-bootstrap/uib-carousel-code.html'" language="html" id="uib-carousel-html"></pre>
+        </uib-tab>
+        <uib-tab heading="JS">
+            <button class="btn btn-action" data-clipboard-target="#uib-carousel-js" ngclipboard>
+                <ng-md-icon icon="content_copy" size="16"></ng-md-icon>
+            </button>
+            <pre hljs include="'components/ui-bootstrap/uib-carousel-code.js'" language="javascript" id="uib-carousel-js"></pre>
+        </uib-tab>
+    </uib-tabset>
 
-      <br>
-      <p><b>With input</b></p>
+    <div class="page-header">
+        <h1>Datepicker</h1>
+    </div>
 
-      <div class="row">
-            <div class="col-md-6">
-                  <p class="input-group">
-                        <input type="text" class="form-control datepicker" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2099-06-22'" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
-                        <span class="input-group-btn">
-                              <button type="button" angular-ripple class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-                        </span>
-                  </p>
-            </div>
-      </div>
+    <p>
+        <b>Inline</b>
+    </p>
 
-      <div class="page-header">
-            <h1>Modals</h1>
-      </div>
+    <uib-datepicker class="datepicker" custom-class="getDayClass(date, mode)" min-date="minDate" ng-model="dt" show-weeks="false"></uib-datepicker>
 
-      <button class="btn btn-default" angular-ripple ng-click="openModal()">Open me!</button>
-      <button class="btn btn-default" angular-ripple ng-click="openModal('lg')">Large modal</button>
-      <button class="btn btn-default" angular-ripple ng-click="openModal('sm')">Small modal</button>
+    <uib-tabset class="mt-md">
+        <uib-tab heading="HTML">
+            <button class="btn btn-action" data-clipboard-target="#uib-datepicker-inline-html" ngclipboard>
+                <ng-md-icon icon="content_copy" size="16"></ng-md-icon>
+            </button>
+            <pre hljs include="'components/ui-bootstrap/uib-datepicker-inline-code.html'" language="html" id="uib-datepicker-inline-html"></pre>
+        </uib-tab>
+        <uib-tab heading="JS">
+            <button class="btn btn-action" data-clipboard-target="#uib-datepicker-inline-js" ngclipboard>
+                <ng-md-icon icon="content_copy" size="16"></ng-md-icon>
+            </button>
+            <pre hljs include="'components/ui-bootstrap/uib-datepicker-inline-code.js'" language="javascript" id="uib-datepicker-inline-js"></pre>
+        </uib-tab>
+    </uib-tabset>
 
-      <div class="page-header">
-            <h1>Pagination</h1>
-      </div>
+    <br>
+    <p>
+        <b>With input</b>
+    </p>
 
-      <uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></uib-pagination>
+    <div class="row">
+        <div class="col-md-6">
+            <p class="input-group">
+                <input class="form-control datepicker" close-text="Close" datepicker-options="dateOptions" is-open="opened" max-date="'2099-06-22'" min-date="minDate" ng-model="dt" ng-required="true" type="text" uib-datepicker-popup="{{format}}"/>
+                <span class="input-group-btn">
+                    <button angular-ripple class="btn btn-default" ng-click="open($event)" type="button">
+                        <i class="glyphicon glyphicon-calendar"></i>
+                    </button>
+                </span>
+            </p>
+        </div>
+    </div>
+    <uib-tabset class="mt-md">
+        <uib-tab heading="HTML">
+            <button class="btn btn-action" data-clipboard-target="#uib-datepicker-input-html" ngclipboard>
+                <ng-md-icon icon="content_copy" size="16"></ng-md-icon>
+            </button>
+            <pre hljs include="'components/ui-bootstrap/uib-datepicker-input-code.html'" language="html" id="uib-datepicker-input-html"></pre>
+        </uib-tab>
+        <uib-tab heading="JS">
+            <button class="btn btn-action" data-clipboard-target="#uib-datepicker-input-js" ngclipboard>
+                <ng-md-icon icon="content_copy" size="16"></ng-md-icon>
+            </button>
+            <pre hljs include="'components/ui-bootstrap/uib-datepicker-input-code.js'" language="javascript" id="uib-datepicker-input-js"></pre>
+        </uib-tab>
+    </uib-tabset>
 
-      <div class="page-header">
-            <h1>Tooltip</h1>
-      </div>
+    <div class="page-header">
+        <h1>Modals</h1>
+    </div>
 
-      <p>This is a
-            <button angular-ripple class="btn btn-primary" uib-tooltip="{{dynamicTooltip}}">{{dynamicTooltipText}}</button>
-      </p>
+    <button angular-ripple class="btn btn-default" ng-click="openModal()">Open me!</button>
+    <button angular-ripple class="btn btn-default" ng-click="openModal('lg')">Large modal</button>
+    <button angular-ripple class="btn btn-default" ng-click="openModal('sm')">Small modal</button>
 
-      <div class="page-header">
-            <h1>Tabs</h1>
-      </div>
+    <uib-tabset class="mt-md">
+        <uib-tab heading="HTML">
+            <button class="btn btn-action" data-clipboard-target="#uib-modal-html" ngclipboard>
+                <ng-md-icon icon="content_copy" size="16"></ng-md-icon>
+            </button>
+            <pre hljs include="'components/ui-bootstrap/uib-modals-code.html'" language="html" id="uib-modal-html"></pre>
+        </uib-tab>
+        <uib-tab heading="JS">
+            <button class="btn btn-action" data-clipboard-target="#uib-modal-js" ngclipboard>
+                <ng-md-icon icon="content_copy" size="16"></ng-md-icon>
+            </button>
+            <pre hljs include="'components/ui-bootstrap/uib-modals-code.js'" language="javascript" id="uib-modal-js"></pre>
+        </uib-tab>
+        <uib-tab heading="Modal Template">
+            <button class="btn btn-action" data-clipboard-target="#uib-modal-template" ngclipboard>
+                <ng-md-icon icon="content_copy" size="16"></ng-md-icon>
+            </button>
+            <pre hljs include="'components/ui-bootstrap/modal-template.html'" language="html" id="uib-modal-template"></pre>
+        </uib-tab>
+    </uib-tabset>
 
-      <uib-tabset>
-            <uib-tab heading="Static title">Static content</uib-tab>
-            <uib-tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disable="tab.disabled">
-                  {{tab.content}}
-            </uib-tab>
-      </uib-tabset>
+    <div class="page-header">
+        <h1>Pagination</h1>
+    </div>
+
+    <uib-pagination ng-change="pageChanged()" ng-model="currentPage" total-items="totalItems"></uib-pagination>
+
+    <uib-tabset class="mt-md mb-md">
+        <uib-tab heading="HTML">
+            <button class="btn btn-action" data-clipboard-target="#uib-pagination-html" ngclipboard>
+                <ng-md-icon icon="content_copy" size="16"></ng-md-icon>
+            </button>
+            <pre hljs include="'components/ui-bootstrap/uib-pagination-code.html'" language="html" id="uib-pagination-html"></pre>
+        </uib-tab>
+        <uib-tab heading="JS">
+            <button class="btn btn-action" data-clipboard-target="#uib-pagination-js" ngclipboard>
+                <ng-md-icon icon="content_copy" size="16"></ng-md-icon>
+            </button>
+            <pre hljs include="'components/ui-bootstrap/uib-pagination-code.js'" language="javascript" id="uib-pagination-js"></pre>
+        </uib-tab>
+    </uib-tabset>
+    <div class="page-header">
+        <h1>Tooltip</h1>
+    </div>
+
+    <p>This is a
+        <button angular-ripple class="btn btn-primary" uib-tooltip="{{dynamicTooltip}}">{{dynamicTooltipText}}</button>
+    </p>
+    <uib-tabset class="mt-md mb-md">
+        <uib-tab heading="HTML">
+          <button class="btn btn-action" data-clipboard-target="#uib-tooltip-html" ngclipboard>
+              <ng-md-icon icon="content_copy" size="16"></ng-md-icon>
+          </button>
+            <pre hljs include="'components/ui-bootstrap/uib-tooltip-code.html'" language="html" id="uib-tooltip-html"></pre>
+        </uib-tab>
+        <uib-tab heading="JS">
+          <button class="btn btn-action" data-clipboard-target="#uib-tooltip-js" ngclipboard>
+              <ng-md-icon icon="content_copy" size="16"></ng-md-icon>
+          </button>
+            <pre hljs include="'components/ui-bootstrap/uib-tooltip-code.js'" language="javascript" id="uib-tooltip-js"></pre>
+        </uib-tab>
+    </uib-tabset>
+
+    <div class="page-header">
+        <h1>Tabs</h1>
+    </div>
+
+    <uib-tabset>
+        <uib-tab heading="Static title">Static content</uib-tab>
+        <uib-tab active="tab.active" disable="tab.disabled" heading="{{tab.title}}" ng-repeat="tab in tabs">
+            {{tab.content}}
+        </uib-tab>
+    </uib-tabset>
+
+    <uib-tabset class="mt-md mb-md">
+        <uib-tab heading="HTML">
+          <button class="btn btn-action" data-clipboard-target="#uib-tabset-html" ngclipboard>
+              <ng-md-icon icon="content_copy" size="16"></ng-md-icon>
+          </button>
+            <pre hljs include="'components/ui-bootstrap/uib-tabset-code.html'" language="html" id="uib-tabset-html"></pre>
+        </uib-tab>
+        <uib-tab heading="JS">
+          <button class="btn btn-action" data-clipboard-target="#uib-tabset-js" ngclipboard>
+              <ng-md-icon icon="content_copy" size="16"></ng-md-icon>
+          </button>
+            <pre hljs include="'components/ui-bootstrap/uib-tabset-code.js'" language="javascript" id="uib-tabset-js"></pre>
+        </uib-tab>
+    </uib-tabset>
 
 </div>
