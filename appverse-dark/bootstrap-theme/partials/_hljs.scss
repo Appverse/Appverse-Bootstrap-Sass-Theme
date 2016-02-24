@@ -26,6 +26,7 @@ pre[hljs] {
   background-color: $body-bg;
   color: $text-color;
   min-height: 50px;
+  max-height: 500px;
 }
 
 .hljs-tag {
