@@ -47,7 +47,9 @@ uib-accordion {
                 color: $white;
                 font-weight: 500;
                 font-size: 14px;
-
+                >div{
+                  display: inline-block;
+                }
                 &:before {
                     content: '+';
                     margin-right: .6em;

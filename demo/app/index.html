@@ -44,6 +44,7 @@
       <link rel="stylesheet" type="text/css" href="bower_components/angularjs-slider/dist/rzslider.min.css">
       <link rel="stylesheet" type="text/css" href="bower_components/angular-chart.js/dist/angular-chart.css">
       <link rel="stylesheet" href="bower_components/highlightjs/styles/github.css">
+      <link rel="stylesheet" href="bower_components/adm-dtp/dist/ADM-dateTimePicker.css">
       <!-- endbuild -->
 
       <!-- build:css(.tmp) styles/styles.css -->
@@ -101,6 +102,9 @@
                               <li data-ng-class="{ active: $state.includes('icons') }">
                                     <a angular-ripple="" ui-sref="icons"><i class="glyphicon glyphicon-th"></i> Icons</a>
                               </li>
+                              <li data-ng-class="{ active: $state.includes('adm-dtp') }">
+                                    <a angular-ripple="" ui-sref="adm-dtp"><i class="glyphicon glyphicon-calendar"></i> ADM DateTimePicker</a>
+                              </li>
                         </ul>
                   </div>
             </nav>
@@ -128,6 +132,9 @@
                         </li>
                         <li data-ng-class="{ active: $state.includes('icons')}">
                               <a angular-ripple="" ui-sref="icons" uib-tooltip="Icons" tooltip-placement="right" tooltip-append-to-body="true" tooltip-class="side-menu-tooltip"><i class="glyphicon glyphicon-th"></i><span class="text">Icons</span></a>
+                        </li>
+                        <li data-ng-class="{ active: $state.includes('adm-dtp')}">
+                              <a angular-ripple="" ui-sref="adm-dtp" uib-tooltip="ADM DateTimePicker" tooltip-placement="right" tooltip-append-to-body="true" tooltip-class="side-menu-tooltip"><i class="glyphicon glyphicon-calendar"></i><span class="text">ADM DateTimePicker</span></a>
                         </li>
                   </ul>
                   <a href="#menu-toggle" angular-ripple class="btn btn-primary menu-toggle" id="menu-toggle">
@@ -184,6 +191,7 @@
       <script src="bower_components/angular-highlightjs/angular-highlightjs.min.js"></script>
       <script src="bower_components/clipboard/dist/clipboard.min.js"></script>
       <script src="bower_components/ngclipboard/dist/ngclipboard.min.js"></script>
+      <script src="bower_components/adm-dtp/dist/ADM-dateTimePicker.min.js"></script>
       <script src="app.js"></script>
       <script src="states/app-states.js"></script>
       <!-- endbuild -->
@@ -192,6 +200,7 @@
       <script src="components/ui-bootstrap/uibootstrap-controller.js"></script>
       <script src="components/ui-select/uiselect-controller.js"></script>
       <script src="components/icons/icons-controller.js"></script>
+      <script src="components/adm-dtp/adm-dtp-controller.js"></script>
       <!-- EO Controllers -->
 
 </body>

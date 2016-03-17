@@ -1,6 +1,6 @@
 {
   "name": "appverse-bootstrap-sass-theme",
-  "version": "0.0.1",
+  "version": "0.0.7",
   "dependencies": {
     "bootstrap-sass": "~3.3.3"
   },
@@ -12,5 +12,5 @@
     "node_modules",
     "Gruntfile.js",
     ".bowerrc"
-  ] 
+  ]
 }
