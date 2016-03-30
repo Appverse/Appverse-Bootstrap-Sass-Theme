@@ -79,6 +79,18 @@ module.exports = {
         dest: 'app/styles/css/fonts',
         src: '**/*'
     },
+    ionicsass: {
+        expand: true,
+        cwd: '<%=paths.app%>/bower_components/ionic/scss',
+        dest: 'app/styles/sass/ionic',
+        src: '**/*'
+    },
+    fontsionic: {
+        expand: true,
+        cwd: '<%=paths.app%>/bower_components/ionic/fonts',
+        dest: 'app/styles/css/fonts/ionic',
+        src: '**/*'
+    },
     theme: {
         expand: true,
         cwd: '<%=paths.app%>/styles/sass/bootstrap-theme',

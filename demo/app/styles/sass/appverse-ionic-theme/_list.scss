@@ -1,0 +1,8 @@
+// LIST CUSTOM STYLES
+ion-list.has-header {
+  .item {
+    &:first-child {
+      border-top: none;
+    }
+  }
+}

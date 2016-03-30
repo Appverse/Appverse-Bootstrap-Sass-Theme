@@ -16,6 +16,13 @@ module.exports = {
             ext: '.css'
         }, {
             expand: true,
+            cwd: '<%=paths.app%>/styles/sass',
+            src: '*.{scss,sass}',
+            dest: '<%=paths.app%>/styles/css',
+            ext: '.app.css',
+            flatten: true
+        }, {
+            expand: true,
             cwd: '<%=paths.app%>/common',
             src: '**/*.{scss,sass}',
             dest: '<%=paths.app%>/styles/css',

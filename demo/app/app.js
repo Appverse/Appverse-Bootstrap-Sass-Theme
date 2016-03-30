@@ -2,6 +2,9 @@
     'use strict';
 
     angular.module('App', [
+            'appverse.router',
+            'appverse.detection',
+            'appverse.ionic',
             'ngAnimate',
             'ui.bootstrap',
             'ui.select',
@@ -15,15 +18,14 @@
             'rt.resize',
             'chart.js',
             'angular.filter',
-            'appverse.router',
-            'appverse',
             'ngMdIcons',
             'hljs',
             'ngclipboard',
-            'ADM-dateTimePicker'
+            'appverse'
         ])
-        .run(function ($log, $rootScope, $state, uibDatepickerConfig, $http, $filter) {
+        .run(function ($log, $rootScope, $state, uibDatepickerConfig, $http, $filter, Detection) {
             $log.debug('theme run');
+            $rootScope.isMobileBrowser = Detection.isMobileBrowser();
             uibDatepickerConfig.showWeeks = false;
 
             //Left side menu toggle.
@@ -32,18 +34,27 @@
                     e.preventDefault();
                     $("#wrapper")
                         .toggleClass("toggled");
-                    $("body").toggleClass("toggled");
+                    $("body")
+                        .toggleClass("toggled");
                 });
-            $(window).resize(function () {
-                  if($(window).width() <= 768){
-                      $("#wrapper").addClass("toggled");
-                      $("body").addClass("toggled");
-                  }
-                  else{
-                      $("#wrapper").removeClass("toggled");
-                      $("body").removeClass("toggled");
-                  }
-            });
+            $(window)
+                .resize(function () {
+                    if ($(window)
+                        .width() <= 768) {
+                        $("#wrapper")
+                            .addClass("toggled");
+                        $("body")
+                            .addClass("toggled");
+                    } else {
+                        $("#wrapper")
+                            .removeClass("toggled");
+                        $("body")
+                            .removeClass("toggled");
+                    }
+                });
+        })
+        .config(function ($ionicConfigProvider) {
+            $ionicConfigProvider.scrolling.jsScrolling(false);
         });
     AppInit.setConfig({});
 

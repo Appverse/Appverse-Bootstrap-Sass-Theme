@@ -2,5 +2,10 @@
     "REST_CONFIG": {
         "BaseUrl": "/api",
         "RequestSuffix": ""
+    },
+    "IONIC_CONFIG": {
+        "modalPrompt": true,
+        "redirectionPath": "/",
+        "suffix": "-mobile"
     }
 }

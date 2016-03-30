@@ -9,7 +9,9 @@ module.exports = {
         'copy:fonts',
         'copy:fontstheme',
         'copy:theme',
-        'copy:images'
+        'copy:images',
+        'copy:ionicsass',
+        'copy:fontsionic'
     ],
     dist: [
         'sass'

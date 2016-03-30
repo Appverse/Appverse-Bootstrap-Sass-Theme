@@ -1,0 +1,16 @@
+// GRID CUSTOM STYLES
+.row {
+    margin: 0;
+}
+
+@media (max-width: 567px) {
+  .row {
+    padding: 0;
+
+    &.responsive-sm {
+      > .col {
+        padding: 0;
+      }
+    }
+  }
+}

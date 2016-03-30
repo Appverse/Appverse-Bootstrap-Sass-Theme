@@ -10,8 +10,8 @@
 
     angular.module('App')
         .config(
-            ['$stateProvider', '$urlRouterProvider',
-                function ($stateProvider, $urlRouterProvider) {
+            ['$stateProvider', '$urlRouterProvider', 'IONIC_CONFIG',
+                function ($stateProvider, $urlRouterProvider, IONIC_CONFIG) {
 
                     ///////////////////////////////
                     // 1-Redirects and Otherwise //
@@ -41,14 +41,22 @@
                         .state('theme', {
                             // Use a url of '/' to set a states as the 'index'.
                             url: '/theme',
-                            templateUrl: 'components/theme/theme.html'
+                            templateUrl: 'components/theme/theme.html',
+                            data: {
+                                mobile: true,
+                                controller: 'themeController-mobile'
+                            }
 
                         })
                         .state('ui-bootstrap', {
                             // Use a url of '/' to set a states as the 'index'.
                             url: '/ui-bootstrap',
                             templateUrl: 'components/ui-bootstrap/ui-bootstrap.html',
-                            controller: 'UIBootstrapController'
+                            controller: 'UIBootstrapController',
+                            data: {
+                                mobile: true,
+                                controller: 'UIBootstrapController-mobile'
+                            }
                         })
                         .state('ui-select', {
                             // Use a url of '/' to set a states as the 'index'.
@@ -60,11 +68,6 @@
                             url: '/icons',
                             templateUrl: 'components/icons/icons.html',
                             controller: 'IconsController'
-                        })
-                        .state('adm-dtp', {
-                            url: '/adm-dtp',
-                            templateUrl: 'components/adm-dtp/adm-dtp.html',
-                            controller: 'AdmDtpController'
                         });
                 }
             ]);
