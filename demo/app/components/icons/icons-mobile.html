@@ -1,0 +1,38 @@
+<link href="styles/css/ionic.app.css" rel="stylesheet">
+<ion-view view-title="Icons">
+    <ion-content class="padding has-header" ionic-scrolled>
+        <h2>Ionicons</h2>
+        <p>SAMPLES</p>
+        <div class="sponsor mt-md">
+            <div>
+                <strong class="mr-xs">PROTEO4</strong>
+                <small>based on</small>
+            </div>
+            <img alt="Appverse HTML5 Powered" src="styles/images/logo.png" title="Appverse HTML5 Powered" width="100">
+        </div>
+        <hr />
+        <div class="card">
+            <div class="item item-divider item-positive">
+                Explanation
+            </div>
+            <div class="item item-text-wrap">
+                <p>Ionic iconset "Ionicons" ready to use.</p>
+                <p>To apply them just add this:</p>
+                <p>
+                    <code>
+                        <span><</span><span>i class="icon [icon-name]"</span><span>></span>
+                        <span><</span><span>/i</span><span>></span>
+                    </code>
+                </p>
+                <p>For more info visit:
+                    <a href="http://ionicons.com/">Ionicons site</a>.</p>
+            </div>
+        </div>
+        <ion-list class="icon-list">
+            <ion-item cl class="item-icon-left" ng-repeat="item in icons">
+                <i class="icon {{item}}"></i>
+                <span>{{item}}</span>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

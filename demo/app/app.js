@@ -23,20 +23,25 @@
             'ngclipboard',
             'appverse'
         ])
-        .run(function ($log, $rootScope, $state, uibDatepickerConfig, $http, $filter, Detection) {
+        .run(function ($log, $rootScope, $state, uibDatepickerConfig, $http, $filter, Detection, $timeout) {
             $log.debug('theme run');
             $rootScope.isMobileBrowser = Detection.isMobileBrowser();
             uibDatepickerConfig.showWeeks = false;
 
-            //Left side menu toggle.
-            $("#menu-toggle")
-                .click(function (e) {
-                    e.preventDefault();
-                    $("#wrapper")
-                        .toggleClass("toggled");
-                    $("body")
-                        .toggleClass("toggled");
-                });
+            $rootScope.scrolledHeader = false;
+
+            $timeout(function () {
+                //Left side menu toggle.
+                $("#menu-toggle")
+                    .click(function (e) {
+                        e.preventDefault();
+                        $("#wrapper")
+                            .toggleClass("toggled");
+                        $("body")
+                            .toggleClass("toggled");
+                    });
+            }, 100);
+
             $(window)
                 .resize(function () {
                     if ($(window)

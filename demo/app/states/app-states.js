@@ -67,7 +67,11 @@
                         .state('icons', {
                             url: '/icons',
                             templateUrl: 'components/icons/icons.html',
-                            controller: 'IconsController'
+                            controller: 'IconsController',
+                            data: {
+                                mobile: true,
+                                controller: 'IconsController-mobile'
+                            }
                         });
                 }
             ]);
