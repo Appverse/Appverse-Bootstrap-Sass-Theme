@@ -19,8 +19,7 @@
             'appverse',
             'ngMdIcons',
             'hljs',
-            'ngclipboard',
-            'ADM-dateTimePicker'
+            'ngclipboard'
         ])
         .run(function ($log, $rootScope, $state, uibDatepickerConfig, $http, $filter) {
             $log.debug('theme run');

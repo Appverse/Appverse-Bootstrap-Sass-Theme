@@ -60,11 +60,6 @@
                             url: '/icons',
                             templateUrl: 'components/icons/icons.html',
                             controller: 'IconsController'
-                        })
-                        .state('adm-dtp', {
-                            url: '/adm-dtp',
-                            templateUrl: 'components/adm-dtp/adm-dtp.html',
-                            controller: 'AdmDtpController'
                         });
                 }
             ]);
